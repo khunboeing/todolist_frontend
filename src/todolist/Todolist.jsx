@@ -13,7 +13,9 @@ const ToDoList = () => {
   // ------------------------get all cards------------------------
 
   const getAllCard = async () => {
-    const result = await axios.post("http://localhost:4000/todolist/getTasks");
+    const result = await axios.post(
+      "https://todolist-backend-sigma.vercel.app/todolist/getTasks"
+    );
     setTasks(result.data);
   };
 
@@ -27,7 +29,7 @@ const ToDoList = () => {
 
   const deleteTask = async () => {
     const result = await axios.post(
-      "http://localhost:4000/todoList/deleteTask",
+      "https://todolist-backend-sigma.vercel.app/todoList/deleteTask",
       { id: chooseDelete }
     );
     console.log("delete", result);
@@ -38,7 +40,7 @@ const ToDoList = () => {
 
   const doneTask = async (id) => {
     const result = await axios.post(
-      "http://localhost:4000/todoList/updateTaskOne",
+      "https://todolist-backend-sigma.vercel.app/todoList/updateTaskOne",
       { id, status: "DONE" }
     );
     await getAllCard();
@@ -58,7 +60,7 @@ const ToDoList = () => {
   //--------------- add task -----------------
   const addTask = async (task) => {
     const result = await axios.post(
-      "http://localhost:4000/todolist/createTask",
+      "https://todolist-backend-sigma.vercel.app/todolist/createTask",
       { data: [{ task }] }
     );
 
