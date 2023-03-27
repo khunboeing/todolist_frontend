@@ -48,14 +48,14 @@ const ToDoList = () => {
 
   // ---------------------update task------------------------
 
-  const updateTasks = (newTasks) => {
-    console.log(newTasks);
-    localStorage.setItem(
-      "tasks",
-      JSON.stringify(newTasks.sort((a, b) => b.id - a.id))
-    );
-    setTasks(newTasks);
-  };
+  // const updateTasks = (newTasks) => {
+  //   console.log(newTasks);
+  //   localStorage.setItem(
+  //     "tasks",
+  //     JSON.stringify(newTasks.sort((a, b) => b.id - a.id))
+  //   );
+  //   setTasks(newTasks);
+  // };
 
   //--------------- add task -----------------
   const addTask = async (task) => {
